@@ -1,0 +1,114 @@
+fn,book,subtitle,season,unit
+apr-2.txt,the peregrine,null,spring,day
+apr-3.txt,the peregrine,null,spring,day
+apr-4.txt,the peregrine,null,spring,day
+dec-1.txt,the peregrine,null,winter,day
+dec-10.txt,the peregrine,null,winter,day
+dec-12.txt,the peregrine,null,winter,day
+dec-15.txt,the peregrine,null,winter,day
+dec-17.txt,the peregrine,null,winter,day
+dec-18.txt,the peregrine,null,winter,day
+dec-2.txt,the peregrine,null,winter,day
+dec-20.txt,the peregrine,null,winter,day
+dec-21.txt,the peregrine,null,winter,day
+dec-22.txt,the peregrine,null,winter,day
+dec-23.txt,the peregrine,null,winter,day
+dec-24.txt,the peregrine,null,winter,day
+dec-27.txt,the peregrine,null,winter,day
+dec-29.txt,the peregrine,null,winter,day
+dec-3.txt,the peregrine,null,winter,day
+dec-5.txt,the peregrine,null,winter,day
+dec-8.txt,the peregrine,null,winter,day
+feb-10.txt,the peregrine,null,winter,day
+feb-17.txt,the peregrine,null,winter,day
+feb-22.txt,the peregrine,null,winter,day
+feb-27.txt,the peregrine,null,winter,day
+jan-18.txt,the peregrine,null,winter,day
+jan-25.txt,the peregrine,null,winter,day
+jan-30.txt,the peregrine,null,winter,day
+jan-5.txt,the peregrine,null,winter,day
+jan-9.txt,the peregrine,null,winter,day
+mar-10.txt,the peregrine,null,spring,day
+mar-11.txt,the peregrine,null,spring,day
+mar-12.txt,the peregrine,null,spring,day
+mar-13.txt,the peregrine,null,spring,day
+mar-14.txt,the peregrine,null,spring,day
+mar-15.txt,the peregrine,null,spring,day
+mar-16.txt,the peregrine,null,spring,day
+mar-17.txt,the peregrine,null,spring,day
+mar-2.txt,the peregrine,null,spring,day
+mar-20.txt,the peregrine,null,spring,day
+mar-21.txt,the peregrine,null,spring,day
+mar-22.txt,the peregrine,null,spring,day
+mar-23.txt,the peregrine,null,spring,day
+mar-25.txt,the peregrine,null,spring,day
+mar-27.txt,the peregrine,null,spring,day
+mar-28.txt,the peregrine,null,spring,day
+mar-29.txt,the peregrine,null,spring,day
+mar-30.txt,the peregrine,null,spring,day
+mar-31.txt,the peregrine,null,spring,day
+mar-5.txt,the peregrine,null,spring,day
+mar-6.txt,the peregrine,null,spring,day
+mar-7.txt,the peregrine,null,spring,day
+mar-8.txt,the peregrine,null,spring,day
+mar-9.txt,the peregrine,null,spring,day
+nov-11.txt,the peregrine,null,fall,day
+nov-12.txt,the peregrine,null,fall,day
+nov-13.txt,the peregrine,null,fall,day
+nov-15.txt,the peregrine,null,fall,day
+nov-16.txt,the peregrine,null,fall,day
+nov-18.txt,the peregrine,null,fall,day
+nov-2.txt,the peregrine,null,fall,day
+nov-21.txt,the peregrine,null,fall,day
+nov-24.txt,the peregrine,null,fall,day
+nov-26.txt,the peregrine,null,fall,day
+nov-28.txt,the peregrine,null,fall,day
+nov-29.txt,the peregrine,null,fall,day
+nov-30.txt,the peregrine,null,fall,day
+nov-4.txt,the peregrine,null,fall,day
+nov-6.txt,the peregrine,null,fall,day
+nov-9.txt,the peregrine,null,fall,day
+oct-1.txt,the peregrine,null,fall,day
+oct-12.txt,the peregrine,null,fall,day
+oct-14.txt,the peregrine,null,fall,day
+oct-15.txt,the peregrine,null,fall,day
+oct-16.txt,the peregrine,null,fall,day
+oct-18.txt,the peregrine,null,fall,day
+oct-20.txt,the peregrine,null,fall,day
+oct-23.txt,the peregrine,null,fall,day
+oct-24.txt,the peregrine,null,fall,day
+oct-26.txt,the peregrine,null,fall,day
+oct-28.txt,the peregrine,null,fall,day
+oct-29.txt,the peregrine,null,fall,day
+oct-3.txt,the peregrine,null,fall,day
+oct-30.txt,the peregrine,null,fall,day
+oct-5.txt,the peregrine,null,fall,day
+oct-7.txt,the peregrine,null,fall,day
+oct-8.txt,the peregrine,null,fall,day
+oct-9.txt,the peregrine,null,fall,day
+the-hunting-life.txt,the peregrine,null,all,all
+apr.txt,the peregrine,null,spring,month
+dec.txt,the peregrine,null,winter,month
+feb.txt,the peregrine,null,winter,month
+jan.txt,the peregrine,null,winter,month
+mar.txt,the peregrine,null,spring,month
+nov.txt,the peregrine,null,fall,month
+oct.txt,the peregrine,null,fall,month
+mar-apr.txt,the peregrine,null,spring,season
+oct-nov.txt,the peregrine,null,fall,season
+dec-jan-feb.txt,the peregrine,null,winter,season
+hill-apr.txt,the hill of summer,april: woods and fields,spring,month
+hill-aug.txt,the hill of summer,august estuary,summer,month
+hill-jul-1.txt,the hill of summer,july: a river,summer,month part
+hill-jul-2.txt,the hill of summer,july: the heath,summer,month part
+hill-jun-1.txt,the hill of summer,june: beech wood,summer,month part
+hill-jun-2.txt,the hill of summer,june: the sea and the moor,summer,month part
+hill-jun-3.txt,the hill of summer,june: midsummer,summer,month part
+hill-may-1.txt,the hill of summer,may: a storm,spring,month part
+hill-may-2.txt,the hill of summer,may: the pine wood,spring,month part
+hill-may-3.txt,the hill of summer,may: a journey,spring,month part
+hill-may-4.txt,the hill of summer,may: downland,spring,month part
+hill-sep.txt,the hill of summer,september: the hill,fall,month
+hill-may.txt,the hill of summer,null,spring,month
+hill-jun.txt,the hill of summer,null,summer,month
+hill-jul.txt,the hill of summer,null,summer,month

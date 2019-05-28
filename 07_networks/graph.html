@@ -1,0 +1,121 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 500px;
+            height: 500px;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+        #config {
+            float: left;
+            width: 400px;
+            height: 600px;
+        }
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<div id = "config"></div>
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"color": "green", "id": "robin", "label": "robin", "shape": "dot", "size": 15}, {"color": "red", "id": "sang", "label": "sang", "shape": "dot", "size": 15}, {"color": "#c0c1c4", "id": "a", "label": "a", "shape": "dot", "size": 15}, {"color": "green", "id": "snow", "label": "snow", "shape": "dot", "size": 15}, {"color": "red", "id": "fell", "label": "fell", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "otherwise", "label": "otherwise", "shape": "dot", "size": 4}, {"color": "green", "id": "silence", "label": "silence", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "like", "label": "like", "shape": "dot", "size": 4}, {"color": "red", "id": "ring", "label": "ring", "shape": "dot", "size": 15}, {"color": "green", "id": "steel", "label": "steel", "shape": "dot", "size": 15}, {"color": "green", "id": "round", "label": "round", "shape": "dot", "size": 15}, {"color": "green", "id": "head", "label": "head", "shape": "dot", "size": 15}, {"color": "red", "id": "glaring", "label": "glaring", "shape": "dot", "size": 15}, {"color": "red", "id": "severed", "label": "severed", "shape": "dot", "size": 15}, {"color": "red", "id": "looking", "label": "looking", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "snow-flecked", "label": "snow-flecked", "shape": "dot", "size": 4}, {"color": "green", "id": "road", "label": "road", "shape": "dot", "size": 15}, {"color": "green", "id": "stack", "label": "stack", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "loose", "label": "loose", "shape": "dot", "size": 4}, {"color": "#8c8c8c", "id": "straw", "label": "straw", "shape": "dot", "size": 4}, {"color": "red", "id": "moved", "label": "moved", "shape": "dot", "size": 15}, {"color": "green", "id": "eye", "label": "eye", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "sudden", "label": "sudden", "shape": "dot", "size": 4}, {"color": "green", "id": "mass", "label": "mass", "shape": "dot", "size": 15}, {"color": "green", "id": "yellow", "label": "yellow", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "cloud", "label": "cloud", "shape": "dot", "size": 4}, {"color": "red", "id": "shining", "label": "shining", "shape": "dot", "size": 15}, {"color": "green", "id": "hair", "label": "hair", "shape": "dot", "size": 15}, {"color": "red", "id": "clutching", "label": "clutching", "shape": "dot", "size": 15}, {"color": "green", "id": "grey", "label": "grey", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "slash", "label": "slash", "shape": "dot", "size": 4}, {"color": "green", "id": "sparrowhawk", "label": "sparrowhawk", "shape": "dot", "size": 15}, {"color": "red", "id": "flicked", "label": "flicked", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "across", "label": "across", "shape": "dot", "size": 4}, {"color": "green", "id": "twig", "label": "twig", "shape": "dot", "size": 15}, {"color": "red", "id": "lashing", "label": "lashing", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "back", "label": "back", "shape": "dot", "size": 4}, {"color": "red", "id": "swooped", "label": "swooped", "shape": "dot", "size": 15}, {"color": "red", "id": "bend", "label": "bend", "shape": "dot", "size": 15}, {"color": "blue", "id": "hawk", "label": "hawk", "shape": "dot", "size": 30}, {"color": "red", "id": "swooping", "label": "swooping", "shape": "dot", "size": 15}, {"color": "red", "id": "startling", "label": "startling", "shape": "dot", "size": 15}, {"color": "green", "id": "prey", "label": "prey", "shape": "dot", "size": 15}, {"color": "green", "id": "whirl", "label": "whirl", "shape": "dot", "size": 15}, {"color": "green", "id": "goldfinch", "label": "goldfinch", "shape": "dot", "size": 15}, {"color": "red", "id": "hurled", "label": "hurled", "shape": "dot", "size": 15}, {"color": "green", "id": "warm", "label": "warm", "shape": "dot", "size": 15}, {"color": "green", "id": "smell", "label": "smell", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "barn", "label": "barn", "shape": "dot", "size": 4}, {"color": "red", "id": "dancing", "label": "dancing", "shape": "dot", "size": 15}, {"color": "#8c8c8c", "id": "lightly", "label": "lightly", "shape": "dot", "size": 4}, {"color": "green", "id": "snowflake", "label": "snowflake", "shape": "dot", "size": 15}, {"color": "red", "id": "chiming", "label": "chiming", "shape": "dot", "size": 15}, {"color": "green", "id": "rain", "label": "rain", "shape": "dot", "size": 15}, {"color": "green", "id": "tin", "label": "tin", "shape": "dot", "size": 15}, {"color": "green", "id": "roof", "label": "roof", "shape": "dot", "size": 15}]);
+        edges = new vis.DataSet([{"color": "grey", "from": "robin", "to": "sang"}, {"color": "grey", "from": "sang", "to": "a"}, {"color": "grey", "from": "a", "to": "snow"}, {"color": "grey", "from": "a", "to": "lightly"}, {"color": "grey", "from": "a", "to": "snowflake"}, {"color": "grey", "from": "snow", "to": "fell"}, {"color": "grey", "from": "snow", "to": "hurled"}, {"color": "grey", "from": "snow", "to": "warm"}, {"color": "grey", "from": "fell", "to": "otherwise"}, {"color": "grey", "from": "otherwise", "to": "silence"}, {"color": "grey", "from": "silence", "to": "like"}, {"color": "grey", "from": "like", "to": "ring"}, {"color": "grey", "from": "like", "to": "glaring"}, {"color": "grey", "from": "like", "to": "yellow"}, {"color": "grey", "from": "like", "to": "cloud"}, {"color": "grey", "from": "like", "to": "eye"}, {"color": "grey", "from": "like", "to": "twig"}, {"color": "grey", "from": "like", "to": "road"}, {"color": "grey", "from": "like", "to": "hawk"}, {"color": "grey", "from": "like", "to": "chiming"}, {"color": "grey", "from": "like", "to": "rain"}, {"color": "grey", "from": "ring", "to": "steel"}, {"color": "grey", "from": "steel", "to": "round"}, {"color": "grey", "from": "round", "to": "head"}, {"color": "grey", "from": "round", "to": "swooped"}, {"color": "grey", "from": "round", "to": "bend"}, {"color": "grey", "from": "head", "to": "severed"}, {"color": "grey", "from": "head", "to": "looking"}, {"color": "grey", "from": "glaring", "to": "severed"}, {"color": "grey", "from": "looking", "to": "snow-flecked"}, {"color": "grey", "from": "snow-flecked", "to": "road"}, {"color": "grey", "from": "road", "to": "bend"}, {"color": "grey", "from": "stack", "to": "loose"}, {"color": "grey", "from": "loose", "to": "straw"}, {"color": "grey", "from": "straw", "to": "moved"}, {"color": "grey", "from": "moved", "to": "eye"}, {"color": "grey", "from": "eye", "to": "sudden"}, {"color": "grey", "from": "eye", "to": "across"}, {"color": "grey", "from": "sudden", "to": "mass"}, {"color": "grey", "from": "mass", "to": "yellow"}, {"color": "grey", "from": "cloud", "to": "shining"}, {"color": "grey", "from": "shining", "to": "hair"}, {"color": "grey", "from": "clutching", "to": "grey"}, {"color": "grey", "from": "grey", "to": "slash"}, {"color": "grey", "from": "slash", "to": "sparrowhawk"}, {"color": "grey", "from": "sparrowhawk", "to": "flicked"}, {"color": "grey", "from": "flicked", "to": "across"}, {"color": "grey", "from": "twig", "to": "lashing"}, {"color": "grey", "from": "lashing", "to": "back"}, {"color": "grey", "from": "hawk", "to": "swooping"}, {"color": "grey", "from": "hawk", "to": "startling"}, {"color": "grey", "from": "hawk", "to": "prey"}, {"color": "grey", "from": "swooping", "to": "startling"}, {"color": "grey", "from": "whirl", "to": "goldfinch"}, {"color": "grey", "from": "goldfinch", "to": "hurled"}, {"color": "grey", "from": "warm", "to": "smell"}, {"color": "grey", "from": "smell", "to": "barn"}, {"color": "grey", "from": "barn", "to": "dancing"}, {"color": "grey", "from": "dancing", "to": "lightly"}, {"color": "grey", "from": "snowflake", "to": "chiming"}, {"color": "grey", "from": "rain", "to": "tin"}, {"color": "grey", "from": "tin", "to": "roof"}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": true
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        // default to using dot shape for nodes
+        options.nodes = {
+            shape: "dot"
+        }
+        
+        // if this network requires displaying the configure window,
+        // put it in its div
+        options.configure["container"] = document.getElementById("config");
+        
+
+        network = new vis.Network(container, data, options);
+
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>
