@@ -1,8 +1,0 @@
-Visualizations I'm interested in:
-
-I want to create networks for each text, and compare the structures of these networks.
-I'd like to see what correlations exist between word density (the number of unique word forms divided by the total number of words) and these networks. Obviously, words with more repetition will have denser graphs with "hubs" (nodes with many connections coming out of them).
-
-Since the networks flatten the temporal dimension of reading / the spatial spread of the text, I would also like to find some way of visualizing how repeated words are distributed throughout the text. Therefore I would also make networks around certain key words (like "white" or "already" or "nearly") in each of the different places where they appear.
-
-Once I've observed these networks and am able to develop some numerical metric with which to compare them, I'd like to make a scatter plot which shows how texts cluster around certain dimensions. For example I might try to correlate the word density with the longest path lengths in each graph, and see if the different texts end up cluster in different groups.
